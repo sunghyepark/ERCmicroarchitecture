@@ -4,12 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-ARCHI	main.cpp	16;"	d	file:
-ARCHITECTURE	circuit.h	/^    enum class ARCHITECTURE$/;"	c	namespace:Qcircuit
 BOOST	makefile	/^BOOST   	= \/tool\/cpplib\/boost\/install\/1.67.0$/;"	m
-BRIDGE_MODE	main.cpp	28;"	d	file:
 BasisGate	QASMparser.h	/^	class BasisGate {$/;"	c	class:QASMparser
-Best_FinalCircuit	circuit.h	/^            Circuit Best_FinalCircuit; \/\/best final quantum circuit$/;"	m	class:Qcircuit::QMapper
 CFLAGS	makefile	/^CFLAGS = -std=c++11 -static-libstdc++ -O3 -fopenmp -fpermissive -DNDEBUG -DIL_STD -pg -Wno-ctor-dtor-privacy $(LIBINCLUDE)$/;"	m
 CMeasure	mymeasure.h	/^		CMeasure() {$/;"	f	class:CMeasure
 CMeasure	mymeasure.h	/^class CMeasure {$/;"	c
@@ -19,63 +15,27 @@ CXXOPTS	makefile	/^CXXOPTS = -m64 -O3 -fopenmp -fPIC -fno-strict-aliasing -fexce
 CXgate	QASMparser.h	/^		CXgate(std::string control, std::string target) {$/;"	f	class:QASMparser::CXgate
 CXgate	QASMparser.h	/^	class CXgate : public BasisGate {$/;"	c	class:QASMparser
 Circuit	circuit.h	/^    struct Circuit$/;"	s	namespace:Qcircuit
-CircuitDepth	circuit.h	/^            vector<int> CircuitDepth;$/;"	m	class:Qcircuit::QMapper
-Circuit_Mapping	mapping.cpp	/^void Qcircuit::QMapper::Circuit_Mapping(Circuit& dgraph, ARCHITECTURE archi, bool forward, bool prepro, bool postpro, bool BRIDGE_MODE)$/;"	f	class:Qcircuit::QMapper
+Circuit_Mapping	mapping.cpp	/^void Qcircuit::QMapper::Circuit_Mapping(Circuit& dgraph)$/;"	f	class:Qcircuit::QMapper
 CompoundGate	QASMparser.h	/^	class CompoundGate {$/;"	c	class:QASMparser
-DEBUG	mappingFunction.cpp	4;"	d	file:
-DEBUG	mappingPreparation.cpp	4;"	d	file:
-DEBUG_G	initial_mapping.cpp	12;"	d	file:
-DEBUG_GRAPH	initial_mapping.cpp	11;"	d	file:
-DEBUG_NEW_INITIAL	initial_mapping.cpp	18;"	d	file:
-DEBUG_NEW_INITIAL_D	mappingPreparation.cpp	8;"	d	file:
 DEBUG_PARSER	parser.cpp	10;"	d	file:
-DEBUG_cost	mapping.cpp	8;"	d	file:
-DEBUG_d	mappingFunction.cpp	5;"	d	file:
-DEBUG_loc	mappingPreparation.cpp	5;"	d	file:
-DEBUG_main	main.cpp	26;"	d	file:
-DEBUG_mapping	mapping.cpp	4;"	d	file:
-DEBUG_mapping_preparation	mappingPreparation.cpp	6;"	d	file:
-DEBUG_qc	initial_mapping.cpp	13;"	d	file:
-DEGREE_CHANGE_v1	initial_mapping.cpp	6;"	d	file:
-DEGREE_CHANGE_v2	initial_mapping.cpp	7;"	d	file:
-DEGREE_CHANGE_v3	initial_mapping.cpp	8;"	d	file:
 Dgraph	circuit.h	/^            Circuit Dgraph;$/;"	m	class:Qcircuit::QMapper
-Dgraph_cnot	circuit.h	/^            Circuit Dgraph_cnot;$/;"	m	class:Qcircuit::QMapper
-Dgraph_reverse	circuit.h	/^            Circuit Dgraph_reverse;$/;"	m	class:Qcircuit::QMapper
-Dlist	circuit.h	/^            vector<list<int> > Dlist;$/;"	m	class:Qcircuit::QMapper
 Dlist_all	circuit.h	/^            vector<list<int> > Dlist_all;$/;"	m	class:Qcircuit::QMapper
-Dlist_all_mode	mapping.cpp	15;"	d	file:
-EXE	makefile	/^EXE = QC2021_Base$/;"	m
+EXE	makefile	/^EXE = ERCdecoder$/;"	m
 Edge	circuit.h	/^    struct Edge$/;"	s	namespace:Qcircuit
 Edge	graph.cpp	/^Qcircuit::Edge::Edge() { }$/;"	f	class:Qcircuit::Edge
 Edge	graph.cpp	/^Qcircuit::Edge::Edge(Node* source, Node* target, int weight) $/;"	f	class:Qcircuit::Edge
-ExecuteCommand	run.py	/^def ExecuteCommand( curBench, result, alpha, beta, gamma, time_limit):$/;"	f
+ExecuteCommand	run.py	/^def ExecuteCommand( curBench, result, time_limit):$/;"	f
 Expr	QASMparser.h	/^		Expr(Kind kind,  Expr* op1, Expr* op2, double num, std::string id) {$/;"	f	class:QASMparser::Expr
 Expr	QASMparser.h	/^		Expr(const Expr& expr) {$/;"	f	class:QASMparser::Expr
 Expr	QASMparser.h	/^	class Expr {$/;"	c	class:QASMparser
-FINALNODE_PRINT	outputwriter.cpp	5;"	d	file:
 FinalCircuit	circuit.h	/^            Circuit FinalCircuit; \/\/final quantum circuit$/;"	m	class:Qcircuit::QMapper
-FinalCircuit_info	outputwriter.cpp	/^void Qcircuit::QMapper::FinalCircuit_info(Circuit& graph, bool final_circuit)$/;"	f	class:Qcircuit::QMapper
+FinalCircuit_info	outputwriter.cpp	/^void Qcircuit::QMapper::FinalCircuit_info(Circuit& graph)$/;"	f	class:Qcircuit::QMapper
 FindTCAD	run.py	/^def FindTCAD( name ):$/;"	f
 GATETYPE	circuit.h	/^    enum class GATETYPE$/;"	c	namespace:Qcircuit
-GRAPH_MATCHING_MIX	circuit.h	/^        GRAPH_MATCHING_MIX,$/;"	m	class:Qcircuit::INITIALTYPE
-GRAPH_MATCHING_MIX_UPDATE	circuit.h	/^        GRAPH_MATCHING_MIX_UPDATE,$/;"	m	class:Qcircuit::INITIALTYPE
-GRAPH_MATCHING_NUMBER	circuit.h	/^        GRAPH_MATCHING_NUMBER,$/;"	m	class:Qcircuit::INITIALTYPE
-GRAPH_MATCHING_ORDER	circuit.h	/^        GRAPH_MATCHING_ORDER,$/;"	m	class:Qcircuit::INITIALTYPE
 Gate	circuit.h	/^    struct Gate$/;"	s	namespace:Qcircuit
 Graph	circuit.h	/^    struct Graph$/;"	s	namespace:Qcircuit
 Graph	graph.cpp	/^Qcircuit::Graph::Graph()$/;"	f	class:Qcircuit::Graph
 H	circuit.h	/^        U, RX, RZ, CNOT, X, Y, Z, H, S, SDG, T, TDG$/;"	m	class:Qcircuit::GATETYPE
-IBM_Q_16_Melbourne	circuit.h	/^        IBM_Q_16_Melbourne,$/;"	m	class:Qcircuit::ARCHITECTURE
-IBM_Q_16_R	circuit.h	/^        IBM_Q_16_R,$/;"	m	class:Qcircuit::ARCHITECTURE
-IBM_Q_20	circuit.h	/^        IBM_Q_20,$/;"	m	class:Qcircuit::ARCHITECTURE
-IBM_Q_20_Tokyo	circuit.h	/^        IBM_Q_20_Tokyo,$/;"	m	class:Qcircuit::ARCHITECTURE
-IBM_Q_53	circuit.h	/^        IBM_Q_53,$/;"	m	class:Qcircuit::ARCHITECTURE
-IBM_Q_London	circuit.h	/^        IBM_Q_London,$/;"	m	class:Qcircuit::ARCHITECTURE
-IDENTITY_MAPPING	circuit.h	/^        IDENTITY_MAPPING,$/;"	m	class:Qcircuit::INITIALTYPE
-INITIAL	main.cpp	17;"	d	file:
-INITIALTYPE	circuit.h	/^    enum class INITIALTYPE$/;"	c	namespace:Qcircuit
-INITIAL_GRAPH	circuit.h	/^    enum class INITIAL_GRAPH$/;"	c	namespace:Qcircuit
 Kind	QASMparser.h	/^		enum class Kind {number, plus, minus, sign, times, sin, cos, tan, exp, ln, sqrt, div, power, id};$/;"	c	class:QASMparser::Expr
 Kind	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	c	class:Token
 KindNames	QASMtoken.cpp	/^std::map<Token::Kind, std::string> Token::KindNames = {$/;"	m	class:Token	file:
@@ -83,38 +43,16 @@ KindNames	QASMtoken.hpp	/^	static std::map<Kind, std::string> KindNames;$/;"	m	c
 LIBFORMAT	makefile	/^LIBFORMAT = static_pic$/;"	m
 LIBGOMP	makefile	/^LIBGOMP 	= -L\/tool\/gcc\/install\/5.4.0\/lib64\/libgomp.a -static$/;"	m
 LIBINCLUDE	makefile	/^LIBINCLUDE = -I$(SRCHASH)\/include -I$(BOOST)\/include$/;"	m
-LINEAR_N	circuit.h	/^        LINEAR_N,$/;"	m	class:Qcircuit::ARCHITECTURE
 LINKCFLAGS	makefile	/^LINKCFLAGS = $(CFLAGS) -static-libstdc++ -lX11 -ldl -lm -lpthread#$(LIBGOMP)$/;"	m
 LineInfo	QASMscanner.hpp	/^    	LineInfo(char ch, int line, int col) {$/;"	f	class:QASMscanner::LineInfo
 LineInfo	QASMscanner.hpp	/^    class LineInfo {$/;"	c	class:QASMscanner
-MAPPING	mapping.cpp	10;"	d	file:
-MAPPING_OUR	mapping.cpp	12;"	d	file:
-MAPPING_TCAD	mapping.cpp	11;"	d	file:
-MIX	circuit.h	/^        MIX,$/;"	m	class:Qcircuit::INITIAL_GRAPH
 MYMEASURE_H	mymeasure.h	18;"	d
-Mixgraph_exponential	mappingPreparation.cpp	10;"	d	file:
-Mixgraph_linear	mappingPreparation.cpp	11;"	d	file:
-NEW_GRAPH_MATCHING	circuit.h	/^        NEW_GRAPH_MATCHING,$/;"	m	class:Qcircuit::INITIALTYPE
-NUMBER	circuit.h	/^        NUMBER,$/;"	m	class:Qcircuit::INITIAL_GRAPH
 Node	circuit.h	/^    struct Node$/;"	s	namespace:Qcircuit
 Node	graph.cpp	/^Qcircuit::Node::Node() { }$/;"	f	class:Qcircuit::Node
 Node	graph.cpp	/^Qcircuit::Node::Node(int weight) : weight(weight) { id = global_id++; }$/;"	f	class:Qcircuit::Node
 OBJECT	makefile	/^OBJECT = ..\/build$/;"	m
-POST_PROCESSING	main.cpp	22;"	d	file:
-PRE_PROCESSING	main.cpp	21;"	d	file:
-PRINT_Dlist	mapping.cpp	5;"	d	file:
-PRINT_Gatelist	mapping.cpp	7;"	d	file:
 PRINT_NODE	parser.cpp	9;"	d	file:
 PRINT_OPTION	parser.cpp	8;"	d	file:
-PRINT_OUTPUT_info	outputwriter.cpp	4;"	d	file:
-PRINT_coupling_graph_name	couplinggraph.cpp	3;"	d	file:
-PRINT_dist_table	initial_mapping.cpp	14;"	d	file:
-PRINT_else	initial_mapping.cpp	16;"	d	file:
-PRINT_graph_function	graphFunction.cpp	4;"	d	file:
-PRINT_init_mapping	mapping.cpp	6;"	d	file:
-PRINT_mapping_process	main.cpp	25;"	d	file:
-PRINT_new_mapping	initial_mapping.cpp	15;"	d	file:
-PROCESS_NUM	main.cpp	23;"	d	file:
 Parse	QASMparser.cpp	/^void QASMparser::Parse() {$/;"	f	class:QASMparser
 ParseLog	run.py	/^def ParseLog( logPath ):$/;"	f
 QASMSCANNER_HPP_	QASMscanner.hpp	11;"	d
@@ -139,7 +77,6 @@ QASMscanner	QASMscanner.hpp	/^class QASMscanner {$/;"	c
 QASMterm	QASMparser.cpp	/^QASMparser::Expr* QASMparser::QASMterm() {$/;"	f	class:QASMparser
 QMapper	circuit.h	/^    class QMapper$/;"	c	namespace:Qcircuit
 Qcircuit	circuit.h	/^namespace Qcircuit$/;"	n
-RANDOM_MAPPING	circuit.h	/^        RANDOM_MAPPING,$/;"	m	class:Qcircuit::INITIALTYPE
 RESULT	run.py	/^RESULT =(   ("4mod5-v1_22"      , 0         , 0     ),$/;"	v
 RESULT_I	run.py	/^RESULT_I =( ("4mod5-v1_22"      , 18        , 0     ),$/;"	v
 RESULT_IR	run.py	/^RESULT_IR =(("4mod5-v1_22"      , 15        , 0     ),$/;"	v
@@ -160,10 +97,7 @@ SRCHASH	makefile	/^SRCHASH 	= \/tool\/cpplib\/sparsehash\/install$/;"	m
 SYSTEM	makefile	/^SYSTEM = x86-64_linux$/;"	m
 Snapshot	QASMparser.h	/^	class Snapshot {$/;"	c	class:QASMparser
 T	circuit.h	/^        U, RX, RZ, CNOT, X, Y, Z, H, S, SDG, T, TDG$/;"	m	class:Qcircuit::GATETYPE
-TCAD_PROCESSING	circuit.h	/^        TCAD_PROCESSING,$/;"	m	class:Qcircuit::INITIALTYPE
 TOKEN_H_	QASMtoken.hpp	11;"	d
-TOYEXAMPLE	circuit.h	/^        TOYEXAMPLE,$/;"	m	class:Qcircuit::ARCHITECTURE
-TempCircuit	circuit.h	/^            Circuit TempCircuit; \/\/for test$/;"	m	class:Qcircuit::QMapper
 Token	QASMtoken.hpp	/^	Token() : Token(Kind::none, 0, 0) {$/;"	f	class:Token
 Token	QASMtoken.hpp	/^	Token(Kind kind, int line, int col) {$/;"	f	class:Token
 Token	QASMtoken.hpp	/^class Token {$/;"	c
@@ -183,16 +117,9 @@ addFileInput	QASMscanner.cpp	/^void QASMscanner::addFileInput(std::string fname)
 addRXgate	QASMparser.cpp	/^void QASMparser::addRXgate(int target, double theta, double phi, double lambda) {$/;"	f	class:QASMparser
 addRZgate	QASMparser.cpp	/^void QASMparser::addRZgate(int target, double theta, double phi, double lambda) {$/;"	f	class:QASMparser
 addUgate	QASMparser.cpp	/^void QASMparser::addUgate(int target, double theta, double phi, double lambda) {$/;"	f	class:QASMparser
-add_bridge	mappingFunction.cpp	/^void Qcircuit::QMapper::add_bridge(int qs, int qt, Circuit& graph)$/;"	f	class:Qcircuit::QMapper
-add_bridge_num	circuit.h	/^            int add_bridge_num;$/;"	m	class:Qcircuit::QMapper
-add_cnot	mappingFunction.cpp	/^void Qcircuit::QMapper::add_cnot(int c_qubit, int t_qubit, Circuit& graph)$/;"	f	class:Qcircuit::QMapper
-add_cnot_num	circuit.h	/^            int add_cnot_num;$/;"	m	class:Qcircuit::QMapper
-add_depth	circuit.h	/^            int add_depth;$/;"	m	class:Qcircuit::QMapper
-add_swap	mappingFunction.cpp	/^void Qcircuit::QMapper::add_swap(int b1, int b2, Circuit& graph)$/;"	f	class:Qcircuit::QMapper
-add_swap_num	circuit.h	/^            int add_swap_num;$/;"	m	class:Qcircuit::QMapper
 addedge	graph.cpp	/^bool Qcircuit::Graph::addedge(int source, int target, int weight)$/;"	f	class:Qcircuit::Graph
 addnode	graph.cpp	/^int Qcircuit::Graph::addnode(int weight)$/;"	f	class:Qcircuit::Graph
-args	run.py	/^                    args=(curBench, results, 0.8, 9, 3, 50))$/;"	v
+args	run.py	/^                    args=(curBench, results, 50))$/;"	v
 argumentNames	QASMparser.h	/^		std::vector<std::string> argumentNames;$/;"	m	class:QASMparser::CompoundGate
 avg	run.py	/^        avg = round(int(s4) \/ int(s2), 6)$/;"	v
 avg_improve	run.py	/^avg_improve = round(sum(avg_set)\/len(avg_set), 6)$/;"	v
@@ -207,74 +134,29 @@ benchresult	run.py	/^    benchresult = results[:]$/;"	v
 benchresult	run.py	/^benchresult = []$/;"	v
 benchresult	run.py	/^benchresult = sorted(benchresult, key=lambda row: row[0][0])$/;"	v
 beta_list	run.py	/^beta_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]$/;"	v
-bfs	graphFunction.cpp	/^int Qcircuit::Graph::bfs(int start, int end)$/;"	f	class:Qcircuit::Graph
-bfs_queue_gen	mappingPreparation.cpp	/^void Qcircuit::QMapper::bfs_queue_gen(queue<int>& queue, Graph& graph, int start, bool order)$/;"	f	class:Qcircuit::QMapper
-bfs_queue_gen_2	mappingPreparation.cpp	/^void Qcircuit::QMapper::bfs_queue_gen_2(queue<int>& queue, Graph& graph_order, Graph& graph_number, int start)$/;"	f	class:Qcircuit::QMapper
-bfs_weight	graphFunction.cpp	/^int Qcircuit::Graph::bfs_weight(int start, int end)$/;"	f	class:Qcircuit::Graph
-binaryName	run.py	/^binaryName = ".\/QC2021_Base"$/;"	v
-build_degree_n	graphFunction.cpp	/^void Qcircuit::Graph::build_degree_n()$/;"	f	class:Qcircuit::Graph
-build_degree_table	graphFunction.cpp	/^void Qcircuit::Graph::build_degree_table()$/;"	f	class:Qcircuit::Graph
-build_dist_table	graphFunction.cpp	/^void Qcircuit::Graph::build_dist_table()$/;"	f	class:Qcircuit::Graph
-build_doubledegree_n	graphFunction.cpp	/^void Qcircuit::Graph::build_doubledegree_n()$/;"	f	class:Qcircuit::Graph
-build_graph_IBM_Q_16_Melbourne	couplinggraph.cpp	/^void Qcircuit::QMapper::build_graph_IBM_Q_16_Melbourne()$/;"	f	class:Qcircuit::QMapper
-build_graph_IBM_Q_16_R	couplinggraph.cpp	/^void Qcircuit::QMapper::build_graph_IBM_Q_16_R()$/;"	f	class:Qcircuit::QMapper
-build_graph_IBM_Q_20	couplinggraph.cpp	/^void Qcircuit::QMapper::build_graph_IBM_Q_20()$/;"	f	class:Qcircuit::QMapper
-build_graph_IBM_Q_20_Tokyo	couplinggraph.cpp	/^void Qcircuit::QMapper::build_graph_IBM_Q_20_Tokyo()$/;"	f	class:Qcircuit::QMapper
-build_graph_IBM_Q_53	couplinggraph.cpp	/^void Qcircuit::QMapper::build_graph_IBM_Q_53()$/;"	f	class:Qcircuit::QMapper
-build_graph_IBM_Q_London	couplinggraph.cpp	/^void Qcircuit::QMapper::build_graph_IBM_Q_London()$/;"	f	class:Qcircuit::QMapper
-build_graph_linear	couplinggraph.cpp	/^void Qcircuit::QMapper::build_graph_linear()$/;"	f	class:Qcircuit::QMapper
-build_graph_toyexample	couplinggraph.cpp	/^void Qcircuit::QMapper::build_graph_toyexample()$/;"	f	class:Qcircuit::QMapper
-build_graph_toyexample_2	couplinggraph.cpp	/^void Qcircuit::QMapper::build_graph_toyexample_2()$/;"	f	class:Qcircuit::QMapper
-cal_MCPE	mappingFunction.cpp	/^double Qcircuit::QMapper::cal_MCPE(const pair<int, int> p, Circuit& dgraph)$/;"	f	class:Qcircuit::QMapper
-cal_MCPE_n	mappingFunction.cpp	/^double Qcircuit::QMapper::cal_MCPE_n(const pair<int, int> p, Circuit& dgraph, int actNum)$/;"	f	class:Qcircuit::QMapper
-cal_SWAP_effect	mappingFunction.cpp	/^int Qcircuit::QMapper::cal_SWAP_effect(const int q1, const int q2, const int Q1, const int Q2)$/;"	f	class:Qcircuit::QMapper
-cal_graph_center	graphFunction.cpp	/^int Qcircuit::Graph::cal_graph_center()$/;"	f	class:Qcircuit::Graph
-cal_graph_center_weight	graphFunction.cpp	/^int Qcircuit::Graph::cal_graph_center_weight()$/;"	f	class:Qcircuit::Graph
+binaryName	run.py	/^binaryName = ".\/ERCdecoder"$/;"	v
 cbegin	mymeasure.h	/^		clock_t				cbegin;$/;"	m	class:CMeasure
 celapsed_secs	mymeasure.h	/^        vector<double>      welapsed_secs, celapsed_secs;$/;"	m	class:CMeasure
 center	circuit.h	/^        int center;$/;"	m	struct:Qcircuit::Graph
 ch	QASMscanner.hpp	/^  	char ch;$/;"	m	class:QASMscanner
 ch	QASMscanner.hpp	/^    	char ch;$/;"	m	class:QASMscanner::LineInfo
 check	QASMparser.cpp	/^void QASMparser::check(Token::Kind expected) {$/;"	f	class:QASMparser
-check_direct_act_list	mapping.cpp	/^bool Qcircuit::QMapper::check_direct_act_list(list<int>& act_list, list<int>& singlequbit_list, vector<bool>& frozen, Circuit& dgraph)$/;"	f	class:Qcircuit::QMapper
 col	QASMscanner.hpp	/^    	int line, col;$/;"	m	class:QASMscanner::LineInfo
 col	QASMscanner.hpp	/^    int col;$/;"	m	class:QASMscanner
 col	QASMtoken.hpp	/^	int col;$/;"	m	class:Token
 comma	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
-compare	mappingPreparation.cpp	/^bool compare(const pair<int, int>& a, const pair<int, int>& b)$/;"	f
-compare_by_act_list	mappingFunction.cpp	/^bool compare_by_act_list(pair< pair<int, int>, pair<int, int> > p1, pair< pair<int, int>, pair<int, int> > p2)$/;"	f
-compare_by_cost	mappingFunction.cpp	/^bool compare_by_cost(pair< pair<int, int>, pair<int, int> > p1, pair< pair<int, int>, pair<int, int> > p2)$/;"	f
-compare_by_test	mappingFunction.cpp	/^bool compare_by_test(pair< pair<int, int>, pair<int, int> > p1, pair< pair<int, int>, pair<int, int> > p2)$/;"	f
-compare_center	graphFunction.cpp	/^bool compare_center(pair<int, int> a, pair<int, int> b)$/;"	f
-compare_center_d	graphFunction.cpp	/^bool compare_center_d(pair<int, int> a, pair<int, int> b)$/;"	f
-compare_cost	mappingPreparation.cpp	/^bool compare_cost(pair<int, int> a, pair<int, int> b)$/;"	f
-compare_cost_d	mappingPreparation.cpp	/^bool compare_cost_d(pair<int, int> a, pair<int, int> b)$/;"	f
-compare_graph_bfs	mappingPreparation.cpp	/^bool compare_graph_bfs(pair< pair<int, int>, int> a, pair< pair<int, int>, int> b)$/;"	f
-compare_graph_bfs_number	mappingPreparation.cpp	/^bool compare_graph_bfs_number(pair< pair<int, int>, int> a, pair< pair<int, int>, int> b)$/;"	f
-compare_graph_sub	mappingPreparation.cpp	/^bool compare_graph_sub(pair< pair<int, int>, pair<int, int>> a, pair< pair<int, int>, pair<int, int>> b)$/;"	f
 compoundGates	QASMparser.h	/^	std::map<std::string, CompoundGate> compoundGates;$/;"	m	class:QASMparser
 control	QASMparser.h	/^		std::string control;$/;"	m	class:QASMparser::CXgate
 control	circuit.h	/^        int control, target;                \/\/logical qubits \/\/if single qubit control = -1$/;"	m	struct:Qcircuit::Gate
 cos	QASMparser.h	/^		enum class Kind {number, plus, minus, sign, times, sin, cos, tan, exp, ln, sqrt, div, power, id};$/;"	m	class:QASMparser::Expr::Kind
 cos	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
-cost_parameter_1	mappingFunction.cpp	8;"	d	file:
-cost_parameter_2	mapping.cpp	21;"	d	file:
-cost_parameter_2	mappingFunction.cpp	9;"	d	file:
-cost_parameter_3	mappingFunction.cpp	10;"	d	file:
-cost_parameter_normal	mapping.cpp	22;"	d	file:
-cost_parameter_normal	mappingFunction.cpp	11;"	d	file:
-cost_prameter_1	mapping.cpp	20;"	d	file:
 cost_weight_table	circuit.h	/^            vector<double> cost_weight_table;$/;"	m	class:Qcircuit::QMapper
-count_max	mappingFunction.cpp	/^int Qcircuit::QMapper::count_max(const vector< pair< pair<int, int>, pair<int, int> > >& v)$/;"	f	class:Qcircuit::QMapper
-coupling_graph	circuit.h	/^            Graph coupling_graph;$/;"	m	class:Qcircuit::QMapper
 creg	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 cregs	QASMparser.h	/^	std::map<std::string, std::pair<int, int*> > cregs;$/;"	m	class:QASMparser
 curTime	run.py	/^curTime = datetime.now().strftime('%m_%d_%H_%M')$/;"	v
 cxgate	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 degree	circuit.h	/^        int** degree;$/;"	m	struct:Qcircuit::Graph
 degreeN	circuit.h	/^        int* degreeN;$/;"	m	struct:Qcircuit::Graph
-delete_degree_table	graphFunction.cpp	/^void Qcircuit::Graph::delete_degree_table()$/;"	f	class:Qcircuit::Graph
-delete_dist_table	graphFunction.cpp	/^void Qcircuit::Graph::delete_dist_table()$/;"	f	class:Qcircuit::Graph
 deleteedge	graph.cpp	/^bool Qcircuit::Graph::deleteedge(int id)$/;"	f	class:Qcircuit::Graph
 deletenode	graph.cpp	/^bool Qcircuit::Graph::deletenode(int id)$/;"	f	class:Qcircuit::Graph
 dirpos	run.py	/^dirpos = "..\/example"$/;"	v
@@ -293,17 +175,11 @@ fatal	mymeasure.h	20;"	d
 fileNameTrim	mymeasure.cpp	/^const char* fileNameTrim(const char * fileName)$/;"	f
 fileName_input	circuit.h	/^            string fileName_input;$/;"	m	class:Qcircuit::QMapper
 fileName_output	circuit.h	/^            string fileName_output;$/;"	m	class:Qcircuit::QMapper
-fileName_reverse	circuit.h	/^            string fileName_reverse;$/;"	m	class:Qcircuit::QMapper
-find_max_cost_SWAP	mappingFunction.cpp	/^pair<int, int> Qcircuit::QMapper::find_max_cost_SWAP(vector< pair< pair<int, int>, pair<int, int> > >& v, list<int>& act_list,$/;"	f	class:Qcircuit::QMapper
-find_max_cost_SWAP_2	mappingFunction.cpp	/^void Qcircuit::QMapper::find_max_cost_SWAP_2(pair<int, int>& SWAP, int& gateid, double& max_cost,$/;"	f	class:Qcircuit::QMapper
-find_singlequbit_list	mapping.cpp	/^void Qcircuit::QMapper::find_singlequbit_list(int gateid, list<int>& singlequbit_list, Circuit& dgraph)$/;"	f	class:Qcircuit::QMapper
 fname	QASMparser.h	/^	std::string fname;$/;"	m	class:QASMparser
 gate	QASMparser.h	/^    Qcircuit::Gate gate;$/;"	m	class:QASMparser
 gate	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 gatelistsL	QASMparser.h	/^	std::vector<Qcircuit::Gate> gatelistsL;$/;"	m	class:QASMparser
 gates	QASMparser.h	/^		std::vector<BasisGate*> gates;$/;"	m	class:QASMparser::CompoundGate
-generate_candi_list	mapping.cpp	/^void Qcircuit::QMapper::generate_candi_list(list<int>& act_list, vector< pair<pair<int, int>, int> >& candi_list, Circuit& dgraph)$/;"	f	class:Qcircuit::QMapper
-generate_candi_list_n	mapping.cpp	/^void Qcircuit::QMapper::generate_candi_list_n(list<int>& act_list, vector< pair<pair<int, int>, int> >& candi_list, Circuit& dgraph)$/;"	f	class:Qcircuit::QMapper
 getGatelists	QASMparser.h	/^    std::vector<Qcircuit::Gate> getGatelists() {$/;"	f	class:QASMparser
 getNgates	QASMparser.h	/^    int getNgates() {$/;"	f	class:QASMparser
 getNqubits	QASMparser.h	/^    int getNqubits() {$/;"	f	class:QASMparser
@@ -320,17 +196,11 @@ global_id	circuit.h	/^        static int global_id;$/;"	m	struct:Qcircuit::Edge
 global_id	circuit.h	/^        static int global_id;$/;"	m	struct:Qcircuit::Node
 global_id	graph.cpp	/^int Qcircuit::Edge::global_id = 0;$/;"	m	class:Qcircuit::Edge	file:
 global_id	graph.cpp	/^int Qcircuit::Node::global_id = 0;$/;"	m	class:Qcircuit::Node	file:
-graph_characteristics	graphFunction.cpp	/^pair<int, bool> Qcircuit::Graph::graph_characteristics(bool i)$/;"	f	class:Qcircuit::Graph
-graph_matching_processing	initial_mapping.cpp	/^void Qcircuit::QMapper::graph_matching_processing(ARCHITECTURE archi)$/;"	f	class:Qcircuit::QMapper
-graph_matching_processing_v2	initial_mapping.cpp	/^void Qcircuit::QMapper::graph_matching_processing_v2(ARCHITECTURE archi)$/;"	f	class:Qcircuit::QMapper
-graph_matching_processing_v3	initial_mapping.cpp	/^void Qcircuit::QMapper::graph_matching_processing_v3(ARCHITECTURE archi, INITIAL_GRAPH graphtype)$/;"	f	class:Qcircuit::QMapper
-graph_matching_processing_v4	initial_mapping.cpp	/^void Qcircuit::QMapper::graph_matching_processing_v4(ARCHITECTURE archi, INITIAL_GRAPH graphtype)$/;"	f	class:Qcircuit::QMapper
 gt	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 id	QASMparser.h	/^		std::string id;$/;"	m	class:QASMparser::Expr
 id	circuit.h	/^        int id; $/;"	m	struct:Qcircuit::Gate
 id	circuit.h	/^        int id;$/;"	m	struct:Qcircuit::Edge
 id	circuit.h	/^        int id;$/;"	m	struct:Qcircuit::Node
-identical_mapping	initial_mapping.cpp	/^void Qcircuit::QMapper::identical_mapping()$/;"	f	class:Qcircuit::QMapper
 identifier	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 in	QASMparser.h	/^  	std::istream* in;$/;"	m	class:QASMparser
 in	QASMscanner.hpp	/^  	std::istream& in;$/;"	m	class:QASMscanner
@@ -338,11 +208,8 @@ include	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plu
 init_global_id	graph.cpp	/^void Qcircuit::Edge::init_global_id() { global_id = 0; }$/;"	f	class:Qcircuit::Edge
 init_global_id	graph.cpp	/^void Qcircuit::Graph::init_global_id()$/;"	f	class:Qcircuit::Graph
 init_global_id	graph.cpp	/^void Qcircuit::Node::init_global_id() { global_id = 0; }$/;"	f	class:Qcircuit::Node
-initial_mapping	initial_mapping.cpp	/^void Qcircuit::QMapper::initial_mapping(ARCHITECTURE archi, bool prepro, bool postpro, bool BRIDGE_MODE, INITIALTYPE initial_type)$/;"	f	class:Qcircuit::QMapper
+initial_mapping	initial_mapping.cpp	/^void Qcircuit::QMapper::initial_mapping()$/;"	f	class:Qcircuit::QMapper
 inputChk	mymeasure.h	/^		dense_hash_map<string, bool> inputChk;$/;"	m	class:CMeasure
-interaction_mixgraph	circuit.h	/^            Graph interaction_mixgraph;$/;"	m	class:Qcircuit::QMapper
-interaction_subgraph_number	circuit.h	/^            Graph interaction_subgraph_number;$/;"	m	class:Qcircuit::QMapper
-interaction_subgraph_order	circuit.h	/^            Graph interaction_subgraph_order;$/;"	m	class:Qcircuit::QMapper
 keywords	QASMscanner.hpp	/^  	std::map<std::string, Token::Kind> keywords;$/;"	m	class:QASMscanner
 kind	QASMparser.h	/^		Kind kind;$/;"	m	class:QASMparser::Expr
 kind	QASMtoken.hpp	/^	Kind kind;$/;"	m	class:Token
@@ -350,15 +217,8 @@ la	QASMparser.h	/^	Token la,t;$/;"	m	class:QASMparser
 lambda	QASMparser.h	/^		Expr* lambda;$/;"	m	class:QASMparser::RXgate
 lambda	QASMparser.h	/^		Expr* lambda;$/;"	m	class:QASMparser::RZgate
 lambda	QASMparser.h	/^		Expr* lambda;$/;"	m	class:QASMparser::Ugate
-layout_L	circuit.h	/^            map<int, int> layout_L;  \/\/L[logical_qubit] = physical_qubit$/;"	m	class:Qcircuit::QMapper
-layout_swap	mappingFunction.cpp	/^void Qcircuit::QMapper::layout_swap(const int b1, const int b2)$/;"	f	class:Qcircuit::QMapper
-layout_swap	mappingFunction.cpp	/^void Qcircuit::QMapper::layout_swap(const int b1, const int b2, map<int, int>& layout)$/;"	f	class:Qcircuit::QMapper
 lbrace	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 lbrack	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
-least_bridge_num	circuit.h	/^            int least_bridge_num;   \/\/least bridge_num$/;"	m	class:Qcircuit::QMapper
-least_cnot_num	circuit.h	/^            int least_cnot_num;     \/\/least cnot_num$/;"	m	class:Qcircuit::QMapper
-least_depth	circuit.h	/^            int least_depth;   \/\/least bridge_num$/;"	m	class:Qcircuit::QMapper
-least_swap_num	circuit.h	/^            int least_swap_num;     \/\/least swap_num$/;"	m	class:Qcircuit::QMapper
 len	QASMparser.h	/^		unsigned long long len;$/;"	m	class:QASMparser::Snapshot
 line	QASMscanner.hpp	/^  	int line;$/;"	m	class:QASMscanner
 line	QASMscanner.hpp	/^    	int line, col;$/;"	m	class:QASMscanner::LineInfo
@@ -370,29 +230,11 @@ logi_qubits	QASMparser.h	/^    map<int, bool> logi_qubits;$/;"	m	class:QASMparse
 logpos	run.py	/^logpos = "..\/log"$/;"	v
 lpar	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 main	main.cpp	/^int main(int argc, char** argv)$/;"	f
-make_CNOT	mappingPreparation.cpp	/^void Qcircuit::QMapper::make_CNOT(bool i)$/;"	f	class:Qcircuit::QMapper
-make_Dlist	mappingPreparation.cpp	/^void Qcircuit::QMapper::make_Dlist(Circuit& dgraph)$/;"	f	class:Qcircuit::QMapper
-make_Dlist_all	mappingPreparation.cpp	/^void Qcircuit::QMapper::make_Dlist_all(Circuit& dgraph)$/;"	f	class:Qcircuit::QMapper
-make_candi_loc	mappingPreparation.cpp	/^void Qcircuit::QMapper::make_candi_loc(vector<int>& candi_loc, vector<int>& ref_loc, Graph& graph)$/;"	f	class:Qcircuit::QMapper
-make_candi_loc_2	mappingPreparation.cpp	/^void Qcircuit::QMapper::make_candi_loc_2(int current_q, Graph& graph, vector<int>& candi_loc_1, vector<int>& candi_loc_2, int& degree)$/;"	f	class:Qcircuit::QMapper
-make_candi_loc_3	mappingPreparation.cpp	/^void Qcircuit::QMapper::make_candi_loc_3(int current_q, Graph& graph, vector<int>& candi_loc_1, vector<int>& candi_loc_2, int& degree)$/;"	f	class:Qcircuit::QMapper
-make_candi_loc_3	mappingPreparation.cpp	/^void Qcircuit::QMapper::make_candi_loc_3(int current_q, Graph& graph, vector<pair<int,int>>& candi_loc, int& degree)$/;"	f	class:Qcircuit::QMapper
-make_candi_loc_degree	mappingPreparation.cpp	/^void Qcircuit::QMapper::make_candi_loc_degree(int current_q, Graph& graph, vector<int>& candi_loc_1, vector<int>& candi_loc_2)$/;"	f	class:Qcircuit::QMapper
-make_candi_loc_dist	mappingPreparation.cpp	/^void Qcircuit::QMapper::make_candi_loc_dist(int current_qc, vector<int>& candi_loc, vector<int>& ref_loc, Graph& coupling_graph, Graph& interaction_graph, bool equal_order)$/;"	f	class:Qcircuit::QMapper
-make_interactionGraph	mappingPreparation.cpp	/^Graph Qcircuit::QMapper::make_interactionGraph(bool i)$/;"	f	class:Qcircuit::QMapper
-make_interactionMixgraph	mappingPreparation.cpp	/^Graph Qcircuit::QMapper::make_interactionMixgraph(bool i, int n)$/;"	f	class:Qcircuit::QMapper
-make_interactionNumberGraph	mappingPreparation.cpp	/^Graph Qcircuit::QMapper::make_interactionNumberGraph(bool i)$/;"	f	class:Qcircuit::QMapper
-make_interactionSubgraph_num	mappingPreparation.cpp	/^Graph Qcircuit::QMapper::make_interactionSubgraph_num(bool i, int n)$/;"	f	class:Qcircuit::QMapper
-make_interactionSubgraph_order	mappingPreparation.cpp	/^Graph Qcircuit::QMapper::make_interactionSubgraph_order(bool i, int n)$/;"	f	class:Qcircuit::QMapper
-make_ref_loc	mappingPreparation.cpp	/^void Qcircuit::QMapper::make_ref_loc(vector<int>& ref_loc, Graph& graph, int start, bool order)$/;"	f	class:Qcircuit::QMapper
 manager	run.py	/^        manager = mp.Manager()$/;"	v
 measure	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 measure	main.cpp	/^static CMeasure measure;$/;"	v	file:
 minus	QASMparser.h	/^		enum class Kind {number, plus, minus, sign, times, sin, cos, tan, exp, ln, sqrt, div, power, id};$/;"	m	class:QASMparser::Expr::Kind
 minus	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
-new_graph_matching_processing	initial_mapping.cpp	/^void Qcircuit::QMapper::new_graph_matching_processing(ARCHITECTURE archi, INITIAL_GRAPH graphtype)$/;"	f	class:Qcircuit::QMapper
-new_layout_L	circuit.h	/^            map<int, int> new_layout_L;$/;"	m	class:Qcircuit::QMapper
-new_qubit_Q	circuit.h	/^            map<int, int> new_qubit_Q;$/;"	m	class:Qcircuit::QMapper
 next	QASMscanner.cpp	/^Token QASMscanner::next() {$/;"	f	class:QASMscanner
 nextCh	QASMscanner.cpp	/^void QASMscanner::nextCh() {$/;"	f	class:QASMscanner
 ngates	QASMparser.h	/^    unsigned int ngates;$/;"	m	class:QASMparser
@@ -424,11 +266,7 @@ operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const Gate& ga
 operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const list<int>& llist)$/;"	f
 operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const map<int, int>& m)$/;"	f
 operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const map<int, vector<int>>& edgemap)$/;"	f
-operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const pair<int, int> p)$/;"	f
 operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const queue<int> q)$/;"	f
-operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const vector< pair< pair<int, int>, int> > v)$/;"	f
-operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const vector< pair< pair<int, int>, pair<int, double>> > v)$/;"	f
-operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const vector< pair< pair<int, int>, pair<int, int>> > v)$/;"	f
 operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const vector<Gate>& nodeset)$/;"	f
 operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const vector<bool>& list)$/;"	f
 operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const vector<int>& list)$/;"	f
@@ -437,7 +275,6 @@ operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const vector<p
 operator <<	circuit.h	/^inline ostream& operator << (ostream& os, const vector<vector<int>>& list)$/;"	f
 operator <<	circuit.h	/^inline ostream& operator << (ostream& os, map<int, Edge> edgeset)$/;"	f
 operator <<	circuit.h	/^inline ostream& operator << (ostream& os, map<int, Node> nodeset)$/;"	f
-originalDepth	circuit.h	/^            int originalDepth;$/;"	m	class:Qcircuit::QMapper
 outpos	run.py	/^outpos = "..\/output"$/;"	v
 output_type	circuit.h	/^        char output_type[128];$/;"	m	struct:Qcircuit::Gate
 param_alpha	circuit.h	/^            double param_alpha;$/;"	m	class:Qcircuit::QMapper
@@ -454,17 +291,10 @@ plus	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, 
 positions	circuit.h	/^            unsigned int positions; \/\/qubit quantity of couping graph   (physical qubits)$/;"	m	class:Qcircuit::QMapper
 power	QASMparser.h	/^		enum class Kind {number, plus, minus, sign, times, sin, cos, tan, exp, ln, sqrt, div, power, id};$/;"	m	class:QASMparser::Expr::Kind
 power	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
-pre_processing	initial_mapping.cpp	/^void Qcircuit::QMapper::pre_processing(ARCHITECTURE archi)$/;"	f	class:Qcircuit::QMapper
 printExpr	QASMparser.cpp	/^void QASMparser::printExpr(Expr* expr) {$/;"	f	class:QASMparser
 printMemoryUsage	mymeasure.cpp	/^void CMeasure::printMemoryUsage(void)$/;"	f	class:CMeasure
 print_clock	mymeasure.cpp	/^void CMeasure::print_clock(){$/;"	f	class:CMeasure
-print_degree_table	graphFunction.cpp	/^void Qcircuit::Graph::print_degree_table()$/;"	f	class:Qcircuit::Graph
-print_dist_table	graphFunction.cpp	/^void Qcircuit::Graph::print_dist_table()$/;"	f	class:Qcircuit::Graph
-print_layout	initial_mapping.cpp	/^void Qcircuit::QMapper::print_layout()$/;"	f	class:Qcircuit::QMapper
-print_layout	initial_mapping.cpp	/^void Qcircuit::QMapper::print_layout(const map<int, int> &layout)$/;"	f	class:Qcircuit::QMapper
 print_only	mymeasure.cpp	/^void CMeasure::print_only(string task) {$/;"	f	class:CMeasure
-print_qubit	initial_mapping.cpp	/^void Qcircuit::QMapper::print_qubit()$/;"	f	class:Qcircuit::QMapper
-print_qubit	initial_mapping.cpp	/^void Qcircuit::QMapper::print_qubit(const map<int, int> &qubit)$/;"	f	class:Qcircuit::QMapper
 probabilities	QASMparser.h	/^		double* probabilities;$/;"	m	class:QASMparser::Snapshot
 probabilities	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 probabilities_ket	QASMparser.h	/^		std::map<std::string, double> probabilities_ket;$/;"	m	class:QASMparser::Snapshot
@@ -473,18 +303,14 @@ process_mem_usage	mymeasure.cpp	/^void CMeasure::process_mem_usage(){$/;"	f	clas
 procs	run.py	/^        procs = []$/;"	v
 qreg	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 qregs	QASMparser.h	/^	std::map<std::string, std::pair<int ,int> > qregs;$/;"	m	class:QASMparser
-qubit_Q	circuit.h	/^            map<int, int> qubit_Q;   \/\/Q[physical_qubit] = logical_qubit$/;"	m	class:Qcircuit::QMapper
-random_mapping	initial_mapping.cpp	/^void Qcircuit::QMapper::random_mapping()$/;"	f	class:Qcircuit::QMapper
 rbrace	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 rbrack	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 readName	QASMscanner.cpp	/^void QASMscanner::readName(Token& t) {$/;"	f	class:QASMscanner
 readNumber	QASMscanner.cpp	/^void QASMscanner::readNumber(Token& t) {$/;"	f	class:QASMscanner
 readString	QASMscanner.cpp	/^void QASMscanner::readString(Token& t) {$/;"	f	class:QASMscanner
 real	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
-remove_degree_n	graphFunction.cpp	/^void Qcircuit::Graph::remove_degree_n(int n)$/;"	f	class:Qcircuit::Graph
 reset	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 results	run.py	/^        results = manager.list()$/;"	v
-revpos	run.py	/^revpos = "..\/reverse"$/;"	v
 rpar	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 rxgate	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 rzgate	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
@@ -496,7 +322,6 @@ s5	run.py	/^    s5 = '%7s' % benchResult[2][1]  #RunTime$/;"	v
 s_beta	run.py	/^    s_beta  = '%4s' % benchResult[0][2]$/;"	v
 scan	QASMparser.cpp	/^void QASMparser::scan() {$/;"	f	class:QASMparser
 scanner	QASMparser.h	/^	QASMscanner* scanner;$/;"	m	class:QASMparser
-select_coupling_graph	couplinggraph.cpp	/^void Qcircuit::QMapper::select_coupling_graph(ARCHITECTURE archi)$/;"	f	class:Qcircuit::QMapper
 semicolon	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 setsource	graph.cpp	/^void Qcircuit::Edge::setsource(Node* source) { this->source = source; }$/;"	f	class:Qcircuit::Edge
 settarget	graph.cpp	/^void Qcircuit::Edge::settarget(Node* target) { this->target = target; }$/;"	f	class:Qcircuit::Edge
@@ -506,10 +331,6 @@ sign	QASMparser.h	/^		enum class Kind {number, plus, minus, sign, times, sin, co
 sin	QASMparser.h	/^		enum class Kind {number, plus, minus, sign, times, sin, cos, tan, exp, ln, sqrt, div, power, id};$/;"	m	class:QASMparser::Expr::Kind
 sin	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 skipComment	QASMscanner.cpp	/^void QASMscanner::skipComment() {$/;"	f	class:QASMscanner
-sort_degree	mappingPreparation.cpp	/^void Qcircuit::QMapper::sort_degree(vector<int>& candi_loc, Graph& graph)$/;"	f	class:Qcircuit::QMapper
-sort_degree_return	mappingPreparation.cpp	/^int Qcircuit::QMapper::sort_degree_return(vector<int>& candi_loc, Graph& graph)$/;"	f	class:Qcircuit::QMapper
-sort_distance	mappingPreparation.cpp	/^void Qcircuit::QMapper::sort_distance(int current_qc, vector<int>& candi_loc, vector<int>& ref_loc, Graph& coupling_graph, Graph& interaction_graph)$/;"	f	class:Qcircuit::QMapper
-sort_double_degree	mappingPreparation.cpp	/^int Qcircuit::QMapper::sort_double_degree(vector<int>& candi_loc, Graph& graph)$/;"	f	class:Qcircuit::QMapper
 source	circuit.h	/^        Node* source;$/;"	m	struct:Qcircuit::Edge
 sqrt	QASMparser.h	/^		enum class Kind {number, plus, minus, sign, times, sin, cos, tan, exp, ln, sqrt, div, power, id};$/;"	m	class:QASMparser::Expr::Kind
 sqrt	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
@@ -539,11 +360,8 @@ times	QASMparser.h	/^		enum class Kind {number, plus, minus, sign, times, sin, c
 times	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
 type	circuit.h	/^        GATETYPE type;$/;"	m	struct:Qcircuit::Gate
 ugate	QASMtoken.hpp	/^	enum class Kind {include, none, identifier, number, plus, semicolon, eof, lpar, rpar, lbrack, rbrack, lbrace, rbrace, comma, minus, times, nninteger, real, qreg, creg, ugate, rxgate, rzgate, cxgate, gate, pi, measure, openqasm, probabilities, sin, cos, tan, exp, ln, sqrt, div, power, string, gt, barrier, opaque, _if, eq, reset, snapshot};$/;"	m	class:Token::Kind
-update_act_dist2_list	mapping.cpp	/^void Qcircuit::QMapper::update_act_dist2_list(list<int>& act_dist2_list, list<int>& act_list, Circuit& dgraph)$/;"	f	class:Qcircuit::QMapper
-update_front_n_act_list	mapping.cpp	/^void Qcircuit::QMapper::update_front_n_act_list(list<int>& front_list, list<int>& act_list, vector<bool>& frozen)$/;"	f	class:Qcircuit::QMapper
 val	QASMtoken.hpp	/^	int val;$/;"	m	class:Token
 valReal	QASMtoken.hpp	/^	double valReal;$/;"	m	class:Token
-vector_equal	graphFunction.cpp	/^bool vector_equal(const vector<int>& v)$/;"	f
 wbegin	mymeasure.h	/^        double 				wbegin;$/;"	m	class:CMeasure
 weight	circuit.h	/^        int weight;$/;"	m	struct:Qcircuit::Edge
 weight	circuit.h	/^        int weight;$/;"	m	struct:Qcircuit::Node

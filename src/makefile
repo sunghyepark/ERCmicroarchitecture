@@ -1,5 +1,5 @@
 
-EXE = QC2021_Base
+EXE = ERCdecoder
 CXX = g++
 SYSTEM = x86-64_linux
 LIBFORMAT = static_pic
@@ -27,13 +27,9 @@ SRC = 	$(OBJECT)/main.o \
 		$(OBJECT)/QASMscanner.o \
 		$(OBJECT)/QASMparser.o \
 		$(OBJECT)/graph.o \
-		$(OBJECT)/graphFunction.o \
 		$(OBJECT)/parser.o \
 		$(OBJECT)/print.o \
-		$(OBJECT)/couplinggraph.o \
 		$(OBJECT)/initial_mapping.o \
-		$(OBJECT)/mappingFunction.o \
-		$(OBJECT)/mappingPreparation.o \
 		$(OBJECT)/mapping.o \
 		$(OBJECT)/outputwriter.o \
 		$(OBJECT)/mymeasure.o 
@@ -71,26 +67,20 @@ $(OBJECT)/QASMparser.o: QASMparser.cpp QASMparser.h circuit.h
 $(OBJECT)/graph.o: graph.cpp circuit.h
 	$(CXX) $(CFLAGS) -c -o $@ $<
 	
-$(OBJECT)/graphFunction.o: graphFunction.cpp circuit.h
-	$(CXX) $(CFLAGS) -c -o $@ $<
-	
 $(OBJECT)/parser.o: parser.cpp circuit.h
 	$(CXX) $(CFLAGS) -c -o $@ $<
 	
 $(OBJECT)/print.o: print.cpp circuit.h
 	$(CXX) $(CFLAGS) -c -o $@ $<
 
-$(OBJECT)/couplinggraph.o: couplinggraph.cpp circuit.h
-	$(CXX) $(CFLAGS) -c -o $@ $<
-
 $(OBJECT)/initial_mapping.o: initial_mapping.cpp circuit.h 
 	$(CXX) $(CFLAGS) -c -o $@ $<
 
-$(OBJECT)/mappingFunction.o: mappingFunction.cpp circuit.h
-	$(CXX) $(CFLAGS) -c -o $@ $<
-
-$(OBJECT)/mappingPreparation.o: mappingPreparation.cpp circuit.h
-	$(CXX) $(CFLAGS) -c -o $@ $<
+#$(OBJECT)/mappingFunction.o: mappingFunction.cpp circuit.h
+#	$(CXX) $(CFLAGS) -c -o $@ $<
+#
+#$(OBJECT)/mappingPreparation.o: mappingPreparation.cpp circuit.h
+#	$(CXX) $(CFLAGS) -c -o $@ $<
 
 $(OBJECT)/mapping.o: mapping.cpp circuit.h
 	$(CXX) $(CFLAGS) -c -o $@ $<

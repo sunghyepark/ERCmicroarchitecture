@@ -14,8 +14,7 @@ using namespace Qcircuit;
 
 void Qcircuit::QMapper::parsing(int argc, char** argv)
 {
-    //if(argc != 4)
-    if(argc != 7)
+    if(argc != 3)
     {
         cout << "ERROR: invalid arguments" << endl;
         exit(1);
@@ -23,15 +22,7 @@ void Qcircuit::QMapper::parsing(int argc, char** argv)
 
     fileName_input   = argv[1];
     fileName_output  = argv[2];
-    //fileName_reverse = argv[3];
 
-    //string alpha = argv[4];
-    //string beta  = argv[5];
-    //string gamma = argv[6];
-
-    //param_alpha = stod(alpha);
-    //param_beta  = stoi(beta);
-    //param_gamma = stoi(gamma);
 
 #if PRINT_OPTION
     cout << "*** Option ***" << endl;

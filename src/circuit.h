@@ -31,40 +31,6 @@ using namespace std;
 
 namespace Qcircuit
 {
-    /////initial mapping
-    enum class INITIALTYPE
-    {
-        IDENTITY_MAPPING,
-        RANDOM_MAPPING,
-        GRAPH_MATCHING_MIX_UPDATE,
-        GRAPH_MATCHING_MIX,
-        GRAPH_MATCHING_NUMBER,
-        GRAPH_MATCHING_ORDER,
-        NEW_GRAPH_MATCHING,
-        TCAD_PROCESSING,
-    };
-
-    enum class INITIAL_GRAPH
-    {
-        MIX,
-        NUMBER,
-        ORDER
-    };
-
-    /////coupling graph
-    enum class ARCHITECTURE
-    {
-        IBM_Q_London,
-        IBM_Q_16_R,
-        IBM_Q_16_Melbourne,
-        IBM_Q_20,
-        IBM_Q_20_Tokyo,
-        IBM_Q_53,
-        LINEAR_N,
-        TOYEXAMPLE,
-        TOYEXAMPLE_2
-    };
-
     enum class GATETYPE
     {
         U, RX, RZ, CNOT, X, Y, Z, H, S, SDG, T, TDG
@@ -175,23 +141,6 @@ namespace Qcircuit
         bool addedge(int source, int target, int weight = 1);
         bool deleteedge(int id);
 
-        //graphFunction.cpp
-        void build_dist_table();
-        void print_dist_table();
-        void delete_dist_table();
-        /////////////////////
-        void build_degree_table();
-        void print_degree_table();
-        void delete_degree_table();
-        void build_degree_n();
-        void build_doubledegree_n();
-        void remove_degree_n(int n);
-        /////////////////////
-        int bfs(int start, int end);
-        int bfs_weight(int start, int end);
-        int cal_graph_center();
-        int cal_graph_center_weight();
-        pair<int, bool> graph_characteristics(bool i);
     };
 
     class QMapper
@@ -201,7 +150,6 @@ namespace Qcircuit
             //file names
             string fileName_input;
             string fileName_output;
-            string fileName_reverse;
 
             //cost parameters
             double param_alpha;
@@ -215,50 +163,14 @@ namespace Qcircuit
             
             //Quantum circuit
             Circuit Dgraph;
-            Circuit Dgraph_reverse;
-            Circuit Dgraph_cnot;
             
-            Graph interaction_subgraph_order;
-            Graph interaction_subgraph_number;
-            Graph interaction_mixgraph;
-            
-            //Coupling graph
-            Graph coupling_graph;
-
             //Dlist
-            vector<list<int> > Dlist;
             vector<list<int> > Dlist_all;
 
-            //mapping
-            map<int, int> layout_L;  //L[logical_qubit] = physical_qubit
-            map<int, int> qubit_Q;   //Q[physical_qubit] = logical_qubit
-
-            //map<int, int> layout_swapped;
-            ////for post-processing
-            map<int, int> new_layout_L;
-            map<int, int> new_qubit_Q;
-            
-            //Final quantum circuit
-            Circuit TempCircuit; //for test
-
             Circuit FinalCircuit; //final quantum circuit
-            Circuit Best_FinalCircuit; //best final quantum circuit
             
             //from mapping.cpp
             int node_id;
-            int originalDepth;
-
-            int add_cnot_num;
-            int add_swap_num;
-            int add_bridge_num;
-            int add_depth;
-            vector<int> CircuitDepth;
-
-            int least_cnot_num;     //least cnot_num
-            int least_swap_num;     //least swap_num
-            int least_bridge_num;   //least bridge_num
-            int least_depth;   //least bridge_num
-
             //print.cpp
             void nodeset_out(ofstream &of, Circuit graph);
             void node_print(int N, Circuit graph);
@@ -268,95 +180,14 @@ namespace Qcircuit
             void parsing(int argc, char** argv);
             void QASM_parse(string filename);
 
-            //couplinggraph.cpp
-            void select_coupling_graph(ARCHITECTURE archi);
-            void build_graph_IBM_Q_London();        
-            void build_graph_IBM_Q_16_R();          
-            void build_graph_IBM_Q_16_Melbourne();  
-            void build_graph_IBM_Q_20();            
-            void build_graph_IBM_Q_20_Tokyo();      
-            void build_graph_IBM_Q_53();            
-            void build_graph_toyexample();          
-            void build_graph_toyexample_2();          
-            void build_graph_linear();
-
             //initial_mapping.cpp
-            void initial_mapping(ARCHITECTURE archi, bool prepro, bool postpro, bool BRIDGE_MODE, INITIALTYPE initial_type);
-            
-            void graph_matching_processing_v2(ARCHITECTURE archi);
-            void graph_matching_processing_v3(ARCHITECTURE archi, INITIAL_GRAPH graphtype);
-            void graph_matching_processing_v4(ARCHITECTURE archi, INITIAL_GRAPH graphtype);
-            void new_graph_matching_processing(ARCHITECTURE archi, INITIAL_GRAPH graphtype);
-            
-            void graph_matching_processing(ARCHITECTURE archi);
-            void identical_mapping();
-            void random_mapping();
-            void pre_processing(ARCHITECTURE archi);
-            
-            void print_layout(const map<int, int> &layout);
-            void print_qubit(const map<int, int> &qubit);
-            void print_layout();
-            void print_qubit();
-
-            //mappingPreparation.cpp -> initial_mapping.cpp
-            int sort_double_degree(vector<int>& candi_loc, Graph& graph);
-            /////////////
-            int sort_degree_return(vector<int>& candi_loc, Graph& graph);
-            void sort_degree(vector<int>& candi_loc, Graph& graph);
-            void sort_distance(int current_qc, vector<int>& candi_loc, vector<int>& ref_loc, Graph& coupling_graph, Graph& interaction_graph);
-            
-            void make_Dlist(Circuit& dgraph);
-            void make_Dlist_all(Circuit& dgraph);
-            void make_CNOT(bool i);
-            Graph make_interactionGraph(bool i);
-            Graph make_interactionNumberGraph(bool i);
-            Graph make_interactionSubgraph_num(bool i, int n);
-            Graph make_interactionSubgraph_order(bool i, int n);
-            Graph make_interactionMixgraph(bool i, int n);
-            
-            void bfs_queue_gen(queue<int>& queue, Graph& graph, int start, bool order);
-            void bfs_queue_gen_2(queue<int>& queue, Graph& graph_order, Graph& graph_num, int start);
-            
-            void make_ref_loc(vector<int>& ref_loc, Graph& graph, int start, bool order);
-            void make_candi_loc(vector<int>& candi_loc, vector<int>& ref_loc, Graph& graph);
-            void make_candi_loc_2(int current_q, Graph& graph, vector<int>& candi_loc_1, vector<int>& candi_loc_2, int& degree);
-            void make_candi_loc_3(int current_q, Graph& graph, vector<int>& candi_loc_1, vector<int>& candi_loc_2, int& degree);
-            void make_candi_loc_degree(int current_q, Graph& graph, vector<int>& candi_loc_1, vector<int>& candi_loc_2);
-            void make_candi_loc_dist(int current_qc, vector<int>& candi_loc, vector<int>& ref_loc, Graph& coupling_graph, Graph& interaction_graph, bool equal_order);
-            
-            void make_candi_loc_3(int current_q, Graph& graph, vector<pair<int,int>>& candi_loc, int& degree);
-
+            void initial_mapping();
 
             //mapping.cpp
-            void Circuit_Mapping(Circuit& dgraph, ARCHITECTURE archi, bool forward = false, bool prepro = false, bool postpro = false, bool BRIDGE_MODE=false);
-            void update_front_n_act_list(list<int>& front_list, list<int>& act_list, vector<bool>& frozen);
-            void find_singlequbit_list(int gateid, list<int>& singlequbit_list, Circuit& dgraph);
-            void update_act_dist2_list(list<int>& act_dist2_list, list<int>& act_list, Circuit& dgraph);
-            //bool check_direct_act_list(list<int>& act_list, vector<bool>& frozen, Circuit& dgraph, vector<int>& CircuitDepth);
-            bool check_direct_act_list(list<int>& act_list, list<int>& singlequbit_list, vector<bool>& frozen, Circuit& dgraph);
-            void generate_candi_list(list<int>& act_list, vector< pair< pair<int, int>, int> >& candi_list, Circuit& dgraph);
-            void generate_candi_list_n(list<int>& act_list, vector< pair< pair<int, int>, int> >& candi_list, Circuit& dgraph);
-            //void update_depth(&vector<int> vec_depth);
-
-            //mappingFunction.cpp
-            int cal_SWAP_effect(const int q1, const int q2, const int Q1, const int Q2);
-            double cal_MCPE(const pair<int, int> p, Circuit& dgraph);
-            double cal_MCPE_n(const pair<int, int> p, Circuit& dgraph, int actNum);
-            int count_max(const vector< pair< pair<int, int>, pair<int, int> > >& v);
-            pair<int, int> find_max_cost_SWAP(vector< pair< pair<int, int>, pair<int, int> > >& v, list<int>& act_list,
-                                              vector< pair< pair<int, int>, pair<int, int> > >& history);
-            void find_max_cost_SWAP_2(pair<int, int>& SWAP, int& gateid, double& max_cost,
-                    vector< pair< pair<int, int>, pair<int, double> > >& v, list<int>& act_list,
-                    vector< pair< pair<int, int>, pair<int, double> > >& history);
-
-            void layout_swap(const int b1, const int b2);
-            void layout_swap(const int b1, const int b2, map<int, int>& layout);
-            void add_cnot(int c_qubit, int t_qubit, Circuit& graph);
-            void add_swap(int b1, int b2, Circuit& graph);
-            void add_bridge(int qs, int qt, Circuit& graph);
+            void Circuit_Mapping(Circuit& dgraph);
 
             //outputwriter.cpp
-            void FinalCircuit_info(Circuit& graph, bool final_circuit = false);
+            void FinalCircuit_info(Circuit& graph);
             void write_output(Circuit& graph);
     };
 }
@@ -455,56 +286,6 @@ inline ostream& operator << (ostream& os, const queue<int> q)
     }
     return os;
 }
-/*
-inline ostream& operator << (ostream& os, const vector< pair< pair<int, int>, int > > v)
-{
-    // <dist, weight> , nodeid(table idx)
-    for(auto kv : v)
-    {
-        os << " dist: "              << setw(3) << kv.first.first;
-        os << " weight: "            << setw(3) << kv.first.second;
-        os << " nodeid(table idx): " << setw(3) << kv.second;
-        os << endl;
-    }
-    return os;
-}
-*/
-
-inline ostream& operator << (ostream& os, const pair<int, int> p)
-{
-    return os << "pair: " << p.first << " " << p.second;
-}
-
-inline ostream& operator << (ostream& os, const vector< pair< pair<int, int>, int> > v)
-{
-    for(auto kv : v)
-        os << "SWAP: " << kv.first.first << " " << kv.first.second << " act_gate_id: " << kv.second << endl;
-    return os;
-}
-
-inline ostream& operator << (ostream& os, const vector< pair< pair<int, int>, pair<int, int>> > v)
-//inline ostream& operator << (ostream& os, const vector< pair< pair<int, int>, pair<int, double>> > v)
-{
-    for(auto kv : v)
-    {
-        os << "SWAP: " << kv.first.first << " " << kv.first.second;
-        os << " act_gate_id: " << kv.second.first << " MCPE cost: " << kv.second.second << endl;
-    }
-    return os;
-}
-
-inline ostream& operator << (ostream& os, const vector< pair< pair<int, int>, pair<int, double>> > v)
-//inline ostream& operator << (ostream& os, const vector< pair< pair<int, int>, pair<int, double>> > v)
-{
-    for(auto kv : v)
-    {
-        os << "SWAP: " << kv.first.first << " " << kv.first.second;
-        os << " act_gate_id: " << kv.second.first << " MCPE cost: " << kv.second.second << endl;
-    }
-    return os;
-}
-
-
 
 
 inline ostream& operator << (ostream& os, const vector<list<int>>& list)

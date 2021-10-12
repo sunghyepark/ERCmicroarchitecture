@@ -1,41 +1,15 @@
 
 #include "circuit.h"
 
-#define PRINT_OUTPUT_info 0
-#define FINALNODE_PRINT 0
-
 using namespace std;
 using namespace Qcircuit;
 
-void Qcircuit::QMapper::FinalCircuit_info(Circuit& graph, bool final_circuit)
+void Qcircuit::QMapper::FinalCircuit_info(Circuit& graph)
 {
     //final circuit
-    if(!final_circuit)
-    {
-#if PRINT_OUTPUT_info
-        cout << "*** Final Circuit ***" << endl;
-        cout << "# add_cnot_num: " << add_cnot_num << endl;
-        cout << "# add_swap_num: " << add_swap_num << endl;
-        cout << "# add_bridge_num: " << add_bridge_num << endl;
-        cout << "# add_depth: " << add_depth << endl << endl;
-#endif    
-    }
-    else
-    {
-        cout  << "*** Best Final Circuit ***" << endl;
-        cout << "# add_cnot_num: " << least_cnot_num << endl;
-        cout << "# add_swap_num: " << least_swap_num << endl;
-        cout << "# add_bridge_num: " << least_bridge_num << endl;
-        cout << endl;
-        //cout << "# original_depth: " << originalDepth << endl;
-        //cout << "# add_depth: " << least_depth << endl << endl;
-    }
-    //cout << "# add_bridge_num: " << add_bridge_num << endl;
-    //cout << "# add_(bridge_num + swap_num): " << add_swap_num + add_bridge_num << endl << endl;
-#if FINALNODE_PRINT
+    cout << "*** Final Circuit ***" << endl;
     cout << graph.nodeset << endl;
     cout << " ==> Print Final Circuit Successfully Finished" << endl;
-#endif    
 }    
     
 
